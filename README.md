@@ -17,4 +17,3 @@ We follow the evaluation setup from [Jaume et al., (2024)](https://dl.acm.org/do
 
 ### BRACS and BACH
 We follow the evaluation setup from [Öğüt.,(2026)](https://arxiv.org/abs/2603.00143): [code](https://github.com/ogutsevda/graphist), [BRACS](https://www.bracs.icar.cnr.it/)
-

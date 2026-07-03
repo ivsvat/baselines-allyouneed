@@ -1,0 +1,66 @@
+[project]
+name = "uninformed"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "einops>=0.8.2",
+    "h5py>=3.16.0",
+    "opencv-python>=5.0.0.93",
+    "pandas>=3.0.3",
+    "pyarrow>=24.0.0",
+    "scipy>=1.17.1",
+    "torch==2.5.1",
+    "torch-cluster>=1.6.3",
+    "torch-geometric>=2.6.1",
+    "torchvision>=0.20.1",
+]
+
+[tool.uv.extra-build-dependencies]
+torch-cluster = ["torch"]
+
+[tool.uv]
+package = true
+
+[tool.uv.build-backend]
+module-root = "src"
+
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+[tool.pyright]
+exclude = ["**/*.ipynb", "**/cfg", "**/notebooks", "**/.vscode", "**/.git", "**/.venv", "**/node_modules", "**/__pycache__", "**/.*"]
+ignore = ["**/site-packages/**", "**/distutils/**", "**/node_modules/**", "**/__pycache__/**", "**/*.ipynb", "**/cfg", "**/output"]
+include = ["src"]
+
+line-length = 88
+indent-width = 4
